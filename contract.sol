@@ -17,7 +17,10 @@ contract ZombieFactory {
     }
 
     function _generateRandomDna(string _str) private view returns (uint) {
-        // start here
+        uint rand = uint(keccak256(_str));
+        return rand % dnaModulus;
     }
+
+    // start here
 
 }
